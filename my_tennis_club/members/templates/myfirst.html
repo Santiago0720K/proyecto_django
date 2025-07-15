@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framework Django</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      display: flex;
+    }
+
+    /* Barra lateral */
+    nav {
+      width: 250px;
+      background-color: #092e20;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+      padding-top: 20px;
+    }
+
+    nav h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      background-color: #0d3a29;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Contenido principal */
+    .main {
+      margin-left: 250px;
+      padding: 0;
+      width: calc(100% - 250px);
+    }
+
+    header {
+      background-color: #092e20;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #092e20;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 4px 6px;
+      border-radius: 4px;
+      display: block;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      text-align: center;
+      margin: 30px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación lateral -->
+  <nav>
+    <h3>Django Tutorial</h3>
+    <ul>
+      <li><a href="#definicion">Definición</a></li>
+      <li><a href="#funcion">Función</a></li>
+      <li><a href="#estructura">Estructura</a></li>
+      <li><a href="#ventajas">Ventajas</a></li>
+      <li><a href="#desventajas">Desventajas</a></li>
+      <li><a href="#ejemplo">Ejemplos de empresas</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="main">
+    <header>
+      <h1>Framework Django</h1>
+    </header>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué es Django?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #definicion {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #definicion h2 {
+      text-align: center;
+      font-size: 2em;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    #definicion p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #333333;
+      text-align: justify;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="definicion">
+    <h2>¿Qué es Django?</h2>
+    <p>Django es un software que puede utilizar para desarrollar aplicaciones web de forma rápida y eficiente. La mayoría de las aplicaciones web tienen varias funciones comunes, como la autenticación, la recuperación de información de una base de datos y la administración de cookies. Los desarrolladores tienen que codificar una funcionalidad similar en cada aplicación web que escriban. Django facilita su trabajo al agrupar las diferentes funciones en una gran colección de módulos reutilizables, llamada marco de aplicación web. Los desarrolladores utilizan el marco web de Django para organizar y escribir su código de manera más eficiente y reducir significativamente el tiempo de desarrollo web.</p>
+   <img src="https://1000marcas.net/wp-content/uploads/2021/06/Django-Logo.png" alt="Django logo" width="700" height="400">
+   <img src="https://impulso06.com/wp-content/uploads/2023/11/que-es-django-1024x1024.png" alt="Django logo" width="700" height="700">
+</body>
+</html>
+
+    <section id="funcion">
+      <h2>¿Como funciona Django?</h2>
+      <p>Django sigue el patrón de diseño MVT (Modelo Vista Plantilla)</p>
+      <p>Es una función de Python que recibe una solicitud web y devuelve una respuesta web. Estas vistas son el corazón de la lógica de la aplicación web, donde se manejan las peticiones de los usuarios y se generan las respuestas, ya sean páginas HTML, redirecciones u otras acciones.
+        Django también utiliza el término función para referirse a funciones de base de datos, como las que se utilizan para realizar cálculos o agregaciones sobre los datos. </p>
+    </section>
+
+    <section id="estructura">
+      <h2>Estructura</h2>
+      <p>MVC propone la construcción de tres componentes distintos que son el modelo, la vista y el controlador...</p>
+
+      <b>Modelo</b>
+      <p>El modelo proporciona datos de la base de datos... Los modelos normalmente se encuentran en un archivo llamado models.py</p>
+
+      <b>Vista</b>
+      <p>Una vista es una función o método que toma solicitudes http como argumentos... Se encuentran en views.py.</p>
+
+      <b>Plantilla</b>
+      <p>Una plantilla es un archivo .html donde se describe cómo se debe representar el resultado visual.</p>
+
+      <img src="https://espifreelancer.com/images/Django_mtv.webp" alt="Django MVC" width="600" height="300">
+    </section>
+
+    <section id="ventajas">
+      <h2>Ventajas</h2>
+      <ul>
+        <li>Desarrollo rápido y limpio.</li>
+        <li>Incluye muchas funcionalidades integradas.</li>
+        <li>Gran comunidad y documentación.</li>
+        <li>Alta seguridad.</li>
+      </ul>
+    </section>
+
+    <section id="desventajas">
+      <h2>Desventajas</h2>
+      <ul>
+        <li>No es ideal para aplicaciones pequeñas o simples.</li>
+        <li>Puede tener una curva de aprendizaje para principiantes.</li>
+        <li>Requiere conocimientos básicos de Python y patrones de desarrollo web.</li>
+      </ul>
+    </section>
+
+    <section id="ejemplo">
+      <h2>Ejemplo de empresas</h2>
+      <p>Las empresas eligieron Django porque permite desarrollar aplicaciones web de forma rápida, segura y organizada...</p>
+
+      <b>Instagram</b> <i class="bi bi-instagram"></i>
+      <p>Utilizó Django en sus inicios por su rapidez de desarrollo y escalabilidad.</p>
+
+      <b>Pinterest</b> <i class="bi bi-pinterest"></i>
+      <p>Usó Django para construir su plataforma de contenido y backend.</p>
+
+      <b>Spotify</b> <i class="bi bi-spotify"></i>
+      <p>Utilizó Django para su plataforma de música y servicios backend.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Tutorial Django - SENA ADSO</p>
+    </footer>
+  </div>
+</body>
+</html>

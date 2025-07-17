@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tennis ADSO{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #d9d9d9, #919191, #7d7d7d);
+            color: #333;
+            animation: fadeInBody 1s ease-in;
+        }
+
+        @keyframes fadeInBody {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cuerpo {
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .titulo-principal {
+            font-size: 2.8rem;
+            text-align: center;
+            padding: 30px 0 10px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            animation: fadeInTitle 1s ease;
+        }
+
+        .portada {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0 30px;
+        }
+
+        .img {
+            width: 420px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+            transition: transform 0.4s ease;
+            animation: zoomIn 1s ease;
+        }
+
+        .img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: 20px auto 60px;
+            padding: 30px 20px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.2s ease;
+            text-align: center;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .titulo-miembros {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #147aff;
+            animation: fadeInTitle 1s ease;
+        }
+
+        @keyframes fadeInTitle {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lista li {
+            background: #f7f7f7;
+            padding: 20px 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInList 0.6s ease forwards;
+        }
+
+        .lista li:hover {
+            background-color: #e0f3ff;
+            transform: translateY(-5px);
+        }
+
+        .lista li i {
+            font-size: 1.5rem;
+            color: #147aff;
+        }
+
+        .lista li:nth-child(1) { animation-delay: 0.3s; }
+        .lista li:nth-child(2) { animation-delay: 0.5s; }
+        .lista li:nth-child(3) { animation-delay: 0.7s; }
+
+        @keyframes fadeInList {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<div class="cuerpo">
+    <h1 class="titulo-principal">Tennis ADSO</h1>
+    <div class="portada">
+        <img class="img" src="https://previews.123rf.com/images/dmytrohrynchak/dmytrohrynchak1802/dmytrohrynchak180200041/95584901-abstract-tennis-player-vector-illustration.jpg" alt="Tennis Player">
+    </div>
+    <div class="container"> 
+        <h1 class="titulo-miembros">Miembros</h1>
+        <ul class="lista">
+            {% block content %}
+            <li><i class="bi bi-person-circle"></i> Santiago Pérez</li>
+            <li><i class="bi bi-person-circle"></i> Camila Torres</li>
+            <li><i class="bi bi-person-circle"></i> Mateo Ramírez</li>
+            {% endblock %}
+        </ul>
+    </div>
+</div>
+</body>
+</html>
